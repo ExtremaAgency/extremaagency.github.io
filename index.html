@@ -9,32 +9,47 @@
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
+            text-align: center;
             margin: 0;
             padding: 0;
-            text-align: center;
         }
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 10px 50px;
             background-color: white;
         }
-        .logo img {
-            width: 150px; /* Adjust to make logo bigger */
+        .logo {
+            height: 60px;
         }
-        .nav {
+        .nav-links {
             display: flex;
-            gap: 20px;
-            font-size: 20px;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
         }
         .section {
-            padding: 50px 20px;
+            padding: 80px 10%;
+        }
+        .green-section {
+            background-color: #00800b;
+            padding: 100px 10%;
+        }
+        .separator {
+            height: 2px;
+            background-color: white;
+            margin: 50px auto;
+            width: 80%;
         }
         .services-container {
             display: flex;
             justify-content: space-around;
             text-align: center;
+            flex-wrap: wrap;
         }
         .service {
             width: 30%;
@@ -42,79 +57,72 @@
         .service img {
             width: 100%;
             height: auto;
+            border-radius: 10px;
         }
-        .footer {
-            background-color: #00800b;
+        h2, h3 {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: white;
+            color: black;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 20px;
         }
-        .footer a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .footer img {
-            width: 30px;
+        .contact-icon {
+            width: 24px;
             height: auto;
-        }
-        h2 {
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
-        p {
-            margin-top: 10px;
-            font-size: 18px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Extrema Logo">
-        </div>
-        <nav class="nav">
+        <img src="logo.png" alt="Extrema Logo" class="logo">
+        <nav class="nav-links">
             <a href="#about">About Us</a>
             <a href="#services">Our Services</a>
             <a href="#contact">Contact Us</a>
         </nav>
     </header>
     
-    <section id="about" class="section">
+    <section class="green-section" id="about">
         <h2>Vision</h2>
-        <p>To be the leading bridge between Egypt and Japan in the cybersecurity job market, fostering a globally connected workforce that strengthens Japan’s cybersecurity resilience while empowering Egyptian professionals with international career opportunities.</p>
-        
+        <p>To be the leading bridge between Egypt and Japan in the cybersecurity job market...</p>
         <h2>Mission</h2>
-        <p>Our mission is to train and develop highly skilled cybersecurity professionals in Egypt, equipping them with technical expertise, Japanese language proficiency, and business cultural understanding. By connecting them with Japanese companies in need of qualified talent, we aim to ensure seamless integration, long-term success, and mutual growth for both candidates and employers.</p>
+        <p>Our mission is to train and develop highly skilled cybersecurity professionals in Egypt...</p>
     </section>
+    
+    <div class="separator"></div>
     
     <section id="services" class="section">
         <h2>Our Services</h2>
         <div class="services-container">
             <div class="service">
                 <img src="screening.png" alt="Screening and Interviewing">
-                <h2>Screening and Interviewing</h2>
-                <p>We assess and select the best candidates through rigorous screening and structured interviews.</p>
+                <h3>Screening and Interviewing</h3>
+                <p>We assess candidates through rigorous screening...</p>
             </div>
             <div class="service">
-                <img src="training.png" alt="Japanese Language and Business Culture Training">
-                <h2>Japanese Language and Business Culture Training</h2>
-                <p>Our training equips candidates with essential Japanese language skills and cultural insights.</p>
+                <img src="training.png" alt="Japanese Training">
+                <h3>Japanese Language and Business Culture Training</h3>
+                <p>Providing language and cultural training...</p>
             </div>
             <div class="service">
                 <img src="mobilization.png" alt="Mobilization">
-                <h2>Mobilization</h2>
-                <p>We ensure smooth relocation and integration of talent into Japanese companies.</p>
+                <h3>Mobilization</h3>
+                <p>Seamless relocation and support for professionals...</p>
             </div>
         </div>
     </section>
     
-    <footer id="contact" class="footer">
-        <p>Email: <a href="mailto:business@extrema.agency">business@extrema.agency</a></p>
-        <a href="https://www.linkedin.com/company/extrema-agency/" target="_blank">
-            <img src="linkedin.png" alt="LinkedIn">
-        </a>
+    <footer id="contact">
+        <img src="linkedin.png" alt="LinkedIn" class="contact-icon">
+        <a href="https://www.linkedin.com/company/extrema-agency/" target="_blank">LinkedIn</a>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="contact-icon">
+        <a href="mailto:business@extrema.agency">business@extrema.agency</a>
     </footer>
 </body>
 </html>
