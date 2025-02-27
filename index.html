@@ -4,125 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extrema Agency</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 50px;
-            background-color: white;
-        }
-        .logo {
-            height: 60px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-        .nav-links a {
-            color: black;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .section {
-            padding: 80px 10%;
-        }
-        .green-section {
-            background-color: #00800b;
-            padding: 100px 10%;
-        }
-        .separator {
-            height: 2px;
-            background-color: white;
-            margin: 50px auto;
-            width: 80%;
-        }
-        .services-container {
-            display: flex;
-            justify-content: space-around;
-            text-align: center;
-            flex-wrap: wrap;
-        }
-        .service {
-            width: 30%;
-        }
-        .service img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        h2, h3 {
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: white;
-            color: black;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .contact-icon {
-            width: 24px;
-            height: auto;
-            vertical-align: middle;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Extrema Logo" class="logo">
-        <nav class="nav-links">
-            <a href="#about">About Us</a>
-            <a href="#services">Our Services</a>
-            <a href="#contact">Contact Us</a>
+        <div class="logo-container">
+            <img src="logo.png" alt="Extrema Agency Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
         </nav>
     </header>
-    
-    <section class="green-section" id="about">
-        <h2>Vision</h2>
-        <p>To be the leading bridge between Egypt and Japan in the cybersecurity job market...</p>
-        <h2>Mission</h2>
-        <p>Our mission is to train and develop highly skilled cybersecurity professionals in Egypt...</p>
+
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>Vision</h2>
+            <p>To be the leading bridge between Egypt and Japan in the cybersecurity job market, fostering a globally connected workforce that strengthens Japan’s cybersecurity resilience while empowering Egyptian professionals with international career opportunities.</p>
+            <h2>Mission</h2>
+            <p>Our mission is to train and develop highly skilled cybersecurity professionals in Egypt, equipping them with technical expertise, Japanese language proficiency, and business cultural understanding. By connecting them with Japanese companies in need of qualified talent, we aim to ensure seamless integration, long-term success, and mutual growth for both candidates and employers.</p>
+        </div>
     </section>
-    
+
     <div class="separator"></div>
-    
-    <section id="services" class="section">
+
+    <section id="services" class="fade-in">
         <h2>Our Services</h2>
         <div class="services-container">
             <div class="service">
                 <img src="screening.png" alt="Screening and Interviewing">
                 <h3>Screening and Interviewing</h3>
-                <p>We assess candidates through rigorous screening...</p>
+                <p>We carefully vet candidates to ensure the best fit for your organization, conducting rigorous interviews and assessments.</p>
             </div>
             <div class="service">
-                <img src="training.png" alt="Japanese Training">
+                <img src="training.png" alt="Japanese Language and Business Culture Training">
                 <h3>Japanese Language and Business Culture Training</h3>
-                <p>Providing language and cultural training...</p>
+                <p>Providing in-depth training on Japanese business etiquette, culture, and language to ensure smooth integration.</p>
             </div>
             <div class="service">
                 <img src="mobilization.png" alt="Mobilization">
                 <h3>Mobilization</h3>
-                <p>Seamless relocation and support for professionals...</p>
+                <p>We facilitate the relocation process, including visa arrangements and logistical support, ensuring a hassle-free transition.</p>
             </div>
         </div>
     </section>
-    
-    <footer id="contact">
-        <img src="linkedin.png" alt="LinkedIn" class="contact-icon">
-        <a href="https://www.linkedin.com/company/extrema-agency/" target="_blank">LinkedIn</a>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="contact-icon">
-        <a href="mailto:business@extrema.agency">business@extrema.agency</a>
+
+    <footer>
+        <div class="footer-content">
+            <h2>Contact Us</h2>
+            <p><span class="icon">📧</span> business@extrema.agency</p>
+            <a href="https://www.linkedin.com/company/extrema-agency/" target="_blank">
+                <img src="linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+        <p class="copyright">© 2025 Extrema Agency. All rights reserved.</p>
     </footer>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                $('.fade-in').each(function() {
+                    var elementTop = $(this).offset().top;
+                    var windowBottom = $(window).scrollTop() + $(window).height();
+                    if (windowBottom > elementTop) {
+                        $(this).addClass('visible');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
