@@ -24,10 +24,8 @@
             left: 0;
             z-index: 1000;
         }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: black;
+        .logo img {
+            height: 40px;
         }
         nav a {
             margin: 0 15px;
@@ -39,19 +37,47 @@
             padding: 100px 50px;
             text-align: center;
         }
-        .services div, .about div {
-            margin: 20px 0;
+        #services {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
         }
-        .contact a {
-            color: white;
+        .service {
+            width: 300px;
+            text-align: center;
+        }
+        .service img {
+            width: 100%;
+            height: auto;
+        }
+        #about {
+            background-color: #00800b;
+        }
+        #about h2, #about div {
             font-size: 20px;
+        }
+        #contact {
+            background-color: black;
+        }
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+        .contact-icons a {
+            color: white;
+            font-size: 24px;
             text-decoration: none;
         }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="logo">Extrema</div>
+        <div class="logo"><img src="logo.png" alt="Extrema Logo"></div>
         <nav>
             <a href="#services">Services</a>
             <a href="#about">About Us</a>
@@ -61,22 +87,35 @@
     
     <section id="services" class="services">
         <h2>Our Services</h2>
-        <div><strong>Screening and Interviewing</strong></div>
-        <div><strong>Japanese Language and Business Culture Training</strong></div>
-        <div><strong>Mobilization</strong></div>
+        <div class="service">
+            <img src="screening.png" alt="Screening and Interviewing">
+            <strong>Screening and Interviewing</strong>
+            <p>We carefully assess candidates to ensure they meet the job requirements.</p>
+        </div>
+        <div class="service">
+            <img src="training.png" alt="Japanese Language and Business Culture Training">
+            <strong>Japanese Language and Business Culture Training</strong>
+            <p>We provide language and cultural training to help candidates integrate seamlessly.</p>
+        </div>
+        <div class="service">
+            <img src="mobilization.png" alt="Mobilization">
+            <strong>Mobilization</strong>
+            <p>We assist with the logistics of relocation and work placement in Japan.</p>
+        </div>
     </section>
     
     <section id="about" class="about">
         <h2>About Us</h2>
-        <div><strong>Vision:</strong><br>To be the leading bridge between Egypt and Japan in the cybersecurity job market, fostering a globally connected workforce that strengthens Japan’s cybersecurity resilience while empowering Egyptian professionals with international career opportunities.</div>
-        <div><strong>Mission:</strong><br>Our mission is to train and develop highly skilled cybersecurity professionals in Egypt, equipping them with technical expertise, Japanese language proficiency, and business cultural understanding. By connecting them with Japanese companies in need of qualified talent, we aim to ensure seamless integration, long-term success, and mutual growth for both candidates and employers.</div>
+        <div><strong style="font-size: 22px;">Vision</strong><br>To be the leading bridge between Egypt and Japan in the cybersecurity job market, fostering a globally connected workforce that strengthens Japan’s cybersecurity resilience while empowering Egyptian professionals with international career opportunities.</div>
+        <div><strong style="font-size: 22px;">Mission</strong><br>Our mission is to train and develop highly skilled cybersecurity professionals in Egypt, equipping them with technical expertise, Japanese language proficiency, and business cultural understanding. By connecting them with Japanese companies in need of qualified talent, we aim to ensure seamless integration, long-term success, and mutual growth for both candidates and employers.</div>
     </section>
     
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
-        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank">🔗 LinkedIn</a>
-        <br>
-        <a href="mailto:business@extrema.agency">📧 business@extrema.agency</a>
+        <div class="contact-icons">
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:business@extrema.agency"><i class="fas fa-envelope"></i></a>
+        </div>
     </section>
 </body>
 </html>
