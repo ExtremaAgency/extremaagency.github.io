@@ -5,13 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Extrema Agency</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Extrema Agency Logo" class="logo">
-        </div>
+        <img src="logo.png" alt="Extrema Agency Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#about">About Us</a></li>
@@ -20,9 +17,9 @@
             </ul>
         </nav>
     </header>
-
-    <section id="about" class="fade-in">
-        <div class="container">
+    
+    <section id="about" class="about-section">
+        <div class="content">
             <h2>Vision</h2>
             <p>To be the leading bridge between Egypt and Japan in the cybersecurity job market, fostering a globally connected workforce that strengthens Japan’s cybersecurity resilience while empowering Egyptian professionals with international career opportunities.</p>
             <h2>Mission</h2>
@@ -30,52 +27,38 @@
         </div>
     </section>
 
-    <div class="separator"></div>
-
-    <section id="services" class="fade-in">
+    <hr>
+    
+    <section id="services" class="services-section">
         <h2>Our Services</h2>
         <div class="services-container">
             <div class="service">
                 <img src="screening.png" alt="Screening and Interviewing">
                 <h3>Screening and Interviewing</h3>
-                <p>We carefully vet candidates to ensure the best fit for your organization, conducting rigorous interviews and assessments.</p>
+                <p>We carefully screen and interview candidates to ensure they meet the highest industry standards.</p>
             </div>
             <div class="service">
                 <img src="training.png" alt="Japanese Language and Business Culture Training">
                 <h3>Japanese Language and Business Culture Training</h3>
-                <p>Providing in-depth training on Japanese business etiquette, culture, and language to ensure smooth integration.</p>
+                <p>We provide specialized training to help professionals integrate seamlessly into Japanese work environments.</p>
             </div>
             <div class="service">
                 <img src="mobilization.png" alt="Mobilization">
                 <h3>Mobilization</h3>
-                <p>We facilitate the relocation process, including visa arrangements and logistical support, ensuring a hassle-free transition.</p>
+                <p>We assist professionals in relocating and adapting to their new roles in Japan.</p>
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="footer-content">
-            <h2>Contact Us</h2>
-            <p><span class="icon">📧</span> business@extrema.agency</p>
+    
+    <footer id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <span>📧 business@extrema.agency</span>
             <a href="https://www.linkedin.com/company/extrema-agency/" target="_blank">
                 <img src="linkedin.png" alt="LinkedIn">
             </a>
         </div>
-        <p class="copyright">© 2025 Extrema Agency. All rights reserved.</p>
+        <p>© 2025 Extrema Agency. All rights reserved.</p>
     </footer>
-
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                $('.fade-in').each(function() {
-                    var elementTop = $(this).offset().top;
-                    var windowBottom = $(window).scrollTop() + $(window).height();
-                    if (windowBottom > elementTop) {
-                        $(this).addClass('visible');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
