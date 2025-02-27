@@ -86,20 +86,43 @@
     0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0); }
 }
-        #intro {
+       /* Fullscreen intro setup */
+#intro {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-    background: url('logo2.png') no-repeat center center/cover;
-    z-index: 9999;
-    animation: fadeOut 1s ease-in-out forwards;
-    animation-delay: 2s;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Keep it above everything */
+    animation: fadeZoom 2.5s ease-out forwards;
 }
 
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; visibility: hidden; }
+#intro img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
+
+/* Animation */
+@keyframes fadeZoom {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.2) translate(-200%, -200%);
+    }
+}
+
         .fade-text {
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
@@ -114,7 +137,10 @@
     </style>
 </head>
 <body>
-    <div id="intro"></div>
+    <div id="intro">
+    <img src="logo2.png" alt="Intro Image">
+</div>
+
 
     <header>
         <img src="logo.png" alt="Extrema Logo" class="logo">
@@ -176,5 +202,12 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg" alt="Email" class="contact-icon">
         <a href="mailto:business@extrema.agency">business@extrema.agency</a>
     </footer>
+
+    <script>
+    setTimeout(() => {
+        document.getElementById("intro").style.display = "none";
+    }, 2500); // Matches animation duration
+</script>
+    
 </body>
 </html>
