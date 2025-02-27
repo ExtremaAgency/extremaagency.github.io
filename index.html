@@ -76,9 +76,46 @@
             height: auto;
             vertical-align: middle;
         }
+        .photo {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+        #intro {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url('logo.png') no-repeat center center/cover;
+    z-index: 9999;
+    animation: fadeOut 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; visibility: hidden; }
+}
+        .fade-text {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
     </style>
 </head>
 <body>
+    <div id="intro"></div>
+
     <header>
         <img src="logo.png" alt="Extrema Logo" class="logo">
         <nav class="nav-links">
@@ -90,7 +127,7 @@
  </section>
         <section class="about-section" id="about">
         <p></p>
-         <h1 style="font-size: 30px;">Elite Cyber Talent, Engineered for Japan</h1>
+         <h1 class="fade-text" style="font-size: 40px;">Elite Cyber Talent, Engineered for Japan</h1>
        <p></p>
         </section>
     
@@ -101,17 +138,17 @@
         <p></p>
         <div class="services-container">
             <div class="service">
-                <img src="screening.png" alt="Screening and Interviewing">
+                <img src="screening.png" class="photo">
                 <h3>Screening and Interviewing</h3>
                 
             </div>
             <div class="service">
-                <img src="training.png" alt="Japanese Training">
+                <img src="training.png" class="photo">
                 <h3>Japanese Language and Business Culture Training</h3>
             
             </div>
             <div class="service">
-                <img src="mobilization.png" alt="Mobilization">
+                <img src="mobilization.png" class="photo">
                 <h3>Mobilization</h3>
                
             </div>
